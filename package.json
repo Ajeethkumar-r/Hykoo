@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "connect developers",
   "main": "server.js",
-  "type": "module",
   "scripts": {
     "start": "node server",
     "server": "nodemon server"
@@ -23,6 +22,7 @@
   "homepage": "https://github.com/Ajeethkumar-r/Socio-Cluster#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "config": "^3.3.6",
     "express": "^4.17.1",
     "express-validator": "^6.12.2",
