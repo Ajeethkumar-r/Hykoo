@@ -1,0 +1,22 @@
+{
+  "name": "socio-cluster",
+  "version": "1.0.0",
+  "description": "connect developers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajeethkumar-r/Socio-Cluster.git"
+  },
+  "keywords": [
+    "Social-network"
+  ],
+  "author": "ajeeth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ajeethkumar-r/Socio-Cluster/issues"
+  },
+  "homepage": "https://github.com/Ajeethkumar-r/Socio-Cluster#readme"
+}
