@@ -1,6 +1,11 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
-router.get('/', (req, res) => res.send('User route'))
+// @route POST/api/users
+// @desc Register user
+// @access Public
+router.get('/', (req, res) => {
+  res.send('User route');
+});
 
-module.exports = router
+module.exports = router;
