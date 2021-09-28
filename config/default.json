@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://ajeeth54321:54321@socio.9ifnb.mongodb.net/socio?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://ajeeth54321:54321@socio.9ifnb.mongodb.net/socio?retryWrites=true&w=majority",
+  "jwtSecret": "54321"
 }
