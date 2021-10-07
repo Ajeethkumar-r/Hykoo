@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://ajeeth54321:54321@socio.9ifnb.mongodb.net/socio?retryWrites=true&w=majority",
-  "jwtSecret": "54321"
+  "jwtSecret": "54321",
+  "githubClientId": "61e1fca21ca60d6b1c0e",
+  "githubSecret": "bc106f1c340f7e983a7d29c2bf21c87f9a4ba0d6"
 }
