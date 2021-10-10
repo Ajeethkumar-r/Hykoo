@@ -1,4 +1,54 @@
-$primary-color: blue;
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: $primary-color;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: $dark-color;
+  color: $light-color;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-bottom: solid 1px $border-color;
+}
+
+ul {
+  display: flex;
+}
+
+a {
+  color: azure;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+
+  &:hover {
+    color: $light-color;
+  }
 }
