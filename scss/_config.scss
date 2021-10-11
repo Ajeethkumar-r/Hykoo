@@ -5,3 +5,18 @@ $dark-color: #27323d; //#14171a
 $danger-color: #df4759;
 $success-color: #2eb67d;
 $max-with: 1100px;
+
+//function for text color based on the background
+@function set-text-color($color) {
+  @if (lightness($color) < 50) {
+    @return #fff;
+  } @else {
+    @return #333;
+  }
+}
+
+//mixins
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
