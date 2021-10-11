@@ -1,17 +1,16 @@
-$primary-color: #f5f8fa;
-$light-color: #6bc6ff;
-$border-color: rgb(114, 113, 121);
-$dark-color: #27323d; //#14171a
-$danger-color: #df4759;
-$success-color: #2eb67d;
-$max-with: 1100px;
+$primary-color: #1c8cd1;
+$dark-color: #333333;
+$light-color: #f4f4f4;
+$danger-color: #c71a29;
+$success-color: #1db954;
+$max-width: 1100px;
 
-//function for text color based on the background
+//set text color based on the background
 @function set-text-color($color) {
-  @if (lightness($color) < 50) {
-    @return #fff;
-  } @else {
+  @if (lightness($color) > 50) {
     @return #333;
+  } @else {
+    @return #fff;
   }
 }
 
