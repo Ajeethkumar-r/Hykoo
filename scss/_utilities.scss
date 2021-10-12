@@ -1,3 +1,20 @@
+//form container
+.container {
+  max-width: $max-width;
+  margin: auto;
+  padding: 0rem 2rem;
+  overflow: hidden;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  width: 50%;
+  background-color: #ccc;
+  border-radius: 8px;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
 //landing-inner text
 .x-large {
   font-size: 4rem;
@@ -64,7 +81,7 @@
   &.btn-dark {
     @include set-background($dark-color);
     &:hover {
-      background-color: lighten($dark-color, 5%);
+      background-color: lighten($dark-color, 40%);
     }
   }
   &.btn-success {
@@ -82,8 +99,7 @@
   &.btn-light {
     @include set-background($light-color);
     &:hover {
-      background-color: rgb(70, 68, 68);
-      color: #fff;
+      background-color: lighten($light-color, 5%);
     }
   }
 }

@@ -28,20 +28,23 @@
         <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
-    <section class="landing">
-      <div class="dark-overlay">
-        <div class="landing-inner">
-          <h1 class="x-large">GoGrasp</h1>
-          <p class="lead">
-            Connect smart people around the globe. People create
-            profile/portfolio, Get help from other people, Share thoughts
-          </p>
-          <div class="buttons">
-            <a href="register.html" class="btn btn-primary">Sign Up</a>
-            <a href="login.html" class="btn btn-dark">Login</a>
-          </div>
+    <section class="container">
+      <div class="alert alert-danger">Invalid Credentials</div>
+      <h5 class="large text-primary" style="margin-top: 0.5rem">Sign In</h5>
+      <p class="lead"><i class="fas fa-user"></i> Sign into your account</p>
+      <form action="dashboard.html" class="form">
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" />
         </div>
-      </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" />
+        </div>
+
+        <input type="submit" value="Sign In" class="btn btn-primary" />
+      </form>
+      <p class="my-1">
+        Don't have an account? <a href="register.html">Sign Up</a>
+      </p>
     </section>
   </body>
 </html>
