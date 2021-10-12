@@ -6,9 +6,11 @@
   overflow: hidden;
   margin-top: 6rem;
   margin-bottom: 3rem;
-  width: 50%;
-  background-color: #ccc;
-  border-radius: 8px;
+}
+
+//round image
+.round-image {
+  border-radius: 50%;
 }
 
 .text-primary {
