@@ -104,6 +104,34 @@
   }
 }
 
+// alert
+.alert {
+  padding: 0.12rem 0.4rem;
+  margin-top: 0.8rem;
+  background: $light-color;
+  color: #333;
+  opacity: 0.9;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px #ccc;
+  border-radius: 5px;
+
+  &.alert-primary {
+    @include set-background($primary-color);
+  }
+  &.alert-light {
+    @include set-background($light-color);
+  }
+  &.alert-dark {
+    @include set-background($dark-color);
+  }
+  &.alert-success {
+    @include set-background($success-color);
+  }
+  &.alert-danger {
+    @include set-background($danger-color);
+  }
+}
+
 .dark-overlay {
   height: 100%;
   width: 100%;
