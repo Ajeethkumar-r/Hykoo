@@ -1,7 +1,7 @@
 $primary-color: #1b8fd6;
 $dark-color: #3b3a3a;
 $light-color: #dddcdc;
-$danger-color: #c71a29;
+$danger-color: #c41321;
 $success-color: #1db954;
 $max-width: 1100px;
 
@@ -21,7 +21,7 @@ $max-width: 1100px;
 }
 
 //margin
-$spacemounts: (1, 2, 3, 4, 5);
+$spacemounts: (1 2 3 4 5);
 
 @each $space in $spacemounts {
   .m-#{$space} {
