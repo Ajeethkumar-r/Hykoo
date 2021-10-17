@@ -14,13 +14,13 @@ const Register = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
 
     if (password !== password2) {
       console.log('Password does not match');
     } else {
-      console.log(formData);
+      console.log('Success');
     }
   };
   return (
