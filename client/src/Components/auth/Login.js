@@ -14,9 +14,9 @@ const Login = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
-    console.log('Success');
+    console.log('SUCCESS');
   };
+
   return (
     <Fragment>
       <h1 className='large text-primary'>Sign In</h1>
