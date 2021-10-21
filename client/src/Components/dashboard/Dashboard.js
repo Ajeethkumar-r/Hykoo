@@ -4,26 +4,33 @@ import { getCurrentProfile } from '../../actions/profile';
 import PropTypes from 'prop-types';
 import Spinner from '../layout/Spinner';
 
-function Dashboard({
+// import { Link } from 'react-router-dom';
+
+const Dashboard = ({
   getCurrentProfile,
   auth: { user },
   profile: { profile, loading },
-}) {
+}) => {
   useEffect(() => {
     getCurrentProfile();
-    // eslint-disable-next-line
-  }, []);
+  }, [getCurrentProfile]);
 
   return loading && profile === null ? (
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className='large teat-primary'>Develpor</h1>
-      <p className='lead'>You don't create a profile yet</p>
-      <i className='fas fa-user'>{user && user.name} </i>
+      <h1 className='large text-primary'>Dashboard</h1>
+      <p className='lead'>
+        <i className='fas fa-user'></i> Welcome {user && user.name}
+      </p>
+      {profile !== null ? (
+        <Fragment>has</Fragment>
+      ) : (
+        <Fragment>has not</Fragment>
+      )}
     </Fragment>
   );
-}
+};
 
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
