@@ -1,5 +1,4 @@
 import { GET_PROFILE, PROFILE_ERROR, CLEAR_PROFILE } from '../actions/types';
-import { setAlert } from '../actions/alertActions';
 
 const initialState = {
   profile: null,
@@ -9,6 +8,7 @@ const initialState = {
   error: {},
 };
 
+// eslint-disable-next-line
 export default function (state = initialState, action) {
   const { type, payload } = action;
 
