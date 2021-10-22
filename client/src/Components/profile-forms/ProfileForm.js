@@ -195,23 +195,12 @@ const ProfileForm = ({
             </div>
 
             <div className='form-group social-input'>
-              <i className='fab fa-facebook fa-2x' />
+              <i className='fab fa-instagram fa-2x' />
               <input
                 type='text'
-                placeholder='Facebook URL'
-                name='facebook'
-                value={facebook}
-                onChange={onChange}
-              />
-            </div>
-
-            <div className='form-group social-input'>
-              <i className='fab fa-youtube fa-2x' />
-              <input
-                type='text'
-                placeholder='YouTube URL'
-                name='youtube'
-                value={youtube}
+                placeholder='Instagram URL'
+                name='instagram'
+                value={instagram}
                 onChange={onChange}
               />
             </div>
@@ -223,17 +212,6 @@ const ProfileForm = ({
                 placeholder='Linkedin URL'
                 name='linkedin'
                 value={linkedin}
-                onChange={onChange}
-              />
-            </div>
-
-            <div className='form-group social-input'>
-              <i className='fab fa-instagram fa-2x' />
-              <input
-                type='text'
-                placeholder='Instagram URL'
-                name='instagram'
-                value={instagram}
                 onChange={onChange}
               />
             </div>
