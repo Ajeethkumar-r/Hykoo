@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --primary-color: #2ba9db;
+  --primary-color: #00bd8e;
   --dark-color: #060607;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -253,10 +253,12 @@ img {
 .form select,
 .form textarea {
   display: block;
+  outline: none;
   width: 100%;
   padding: 0.4rem;
-  font-size: 1.2rem;
-  border: 1px solid #ccc;
+  font-size: 1.1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
 }
 
 .form input[type='submit'],
