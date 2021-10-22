@@ -59,7 +59,7 @@ export const register =
     }
   };
 
-export const login = (email, history, password) => async (dispatch) => {
+export const login = (email, password) => async (dispatch) => {
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -74,7 +74,6 @@ export const login = (email, history, password) => async (dispatch) => {
       type: LOGIN_SUCCESS,
       payload: res.data,
     });
-    history.push('/dashboard');
     dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;

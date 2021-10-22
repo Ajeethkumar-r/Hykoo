@@ -17,16 +17,22 @@ import Login from './Components/auth/Login';
 import Alert from './Components/layout/Alert';
 import setAuthToken from './utils/setAuthToken';
 import Dashboard from './Components/dashboard/Dashboard';
-import CreateProfile from './Components/profile-forms/CreateProfile';
+import ProfileForm from './Components/profile-forms/ProfileForm';
 import PrivateRoute from './Components/routing/PrivateRoute';
-
-if (localStorage.token) {
-  setAuthToken(localStorage.token);
-}
+import { LOGOUT } from './actions/types';
 
 const App = () => {
   useEffect(() => {
     store.dispatch(loadUser());
+
+    if (localStorage.token) {
+      setAuthToken(localStorage.token);
+    }
+    store.dispatch(loadUser());
+
+    window.addEventListener('storage', () => {
+      if (!localStorage.token) store.dispatch({ type: LOGOUT });
+    });
   }, []);
   return (
     <Provider store={store}>
@@ -40,10 +46,16 @@ const App = () => {
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
+
               <PrivateRoute
                 exact
                 path='/create-profile'
-                component={CreateProfile}
+                component={ProfileForm}
+              />
+              <PrivateRoute
+                exact
+                path='/edit-profile'
+                component={ProfileForm}
               />
             </Switch>
           </section>

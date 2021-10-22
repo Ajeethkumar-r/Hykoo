@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profile';
 import PropTypes from 'prop-types';
 import Spinner from '../layout/Spinner';
-import { Link, withRouter } from 'react-router-dom';
+import { DashLinks } from './DashLinks';
+import { Link } from 'react-router-dom';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -23,8 +24,12 @@ const Dashboard = ({
         <i className='fas fa-user'></i> Welcome {user && user.name}
       </p>
       {profile && loading !== null ? (
-        <Fragment></Fragment> ? (
-          <Fragment>has</Fragment>
+        <Fragment>
+          <Spinner />
+        </Fragment> ? (
+          <Fragment>
+            <DashLinks />
+          </Fragment>
         ) : (
           <Fragment>
             <p>You have not create a profile Yet, please share your info</p>
@@ -53,6 +58,4 @@ const mapStateToProps = (state) => ({
   profile: state.profile,
 });
 
-export default connect(mapStateToProps, { getCurrentProfile })(
-  withRouter(Dashboard)
-);
+export default connect(mapStateToProps, { getCurrentProfile })(Dashboard);

@@ -18,17 +18,11 @@ export const getCurrentProfile = () => async (dispatch) => {
     });
   }
 };
-
 export const createProfile =
   (formData, history, edit = false) =>
   async (dispatch) => {
     try {
-      const config = {
-        headers: {
-          Content_Type: 'application/json',
-        },
-      };
-      const res = await api.post('/profile', formData, config);
+      const res = await api.post('/profile', formData);
 
       dispatch({
         type: GET_PROFILE,
