@@ -3,6 +3,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
+import ScrollButton from '../scrollButton';
 
 const initialState = {
   company: '',
@@ -223,6 +224,9 @@ const ProfileForm = ({
           Go Back
         </Link>
       </form>
+      <Fragment>
+        <ScrollButton />
+      </Fragment>
     </Fragment>
   );
 };

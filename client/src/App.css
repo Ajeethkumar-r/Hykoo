@@ -44,6 +44,22 @@ img {
   margin-bottom: 3rem;
 }
 
+.scroll {
+  text-align: right;
+  color: #eb6491;
+  overflow-y: scroll;
+  height: 2500px;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  bottom: 40px;
+  height: 20px;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+  color: #eb6491;
+}
+
 /* Text Styles*/
 .x-large {
   font-size: 4rem;
