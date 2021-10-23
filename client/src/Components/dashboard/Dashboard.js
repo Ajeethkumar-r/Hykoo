@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Spinner from '../layout/Spinner';
 import { DashLinks } from './DashLinks';
 import { Link } from 'react-router-dom';
+import ScrollButton from '../Scroll/scrollButton';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -29,6 +30,7 @@ const Dashboard = ({
         </Fragment> ? (
           <Fragment>
             <DashLinks />
+            <ScrollButton />
           </Fragment>
         ) : (
           <Fragment>

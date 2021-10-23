@@ -3,7 +3,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
-import ScrollButton from '../scrollButton';
+import ScrollButton from '../Scroll/scrollButton';
 
 const initialState = {
   company: '',

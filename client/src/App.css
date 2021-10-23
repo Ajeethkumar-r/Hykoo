@@ -1,10 +1,10 @@
 /* Global Styles */
 :root {
-  --primary-color: #eb6491;
-  --dark-color: #060607;
+  --primary-color: #ff4483;
+  --dark-color: #2e2e2e;
   --light-color: #f4f4f4;
-  --danger-color: #fc041c;
-  --success-color: #26db50;
+  --danger-color: #f1183c;
+  --success-color: #33c733;
 }
 
 * {
@@ -44,6 +44,20 @@ img {
   margin-bottom: 3rem;
 }
 
+.scroll {
+  text-align: center;
+  color: #e75480;
+  overflow-y: scroll;
+  height: 2500px;
+  position: fixed;
+  width: 50%;
+  left: 65%;
+  bottom: 20px;
+  height: 20px;
+  font-size: 10rem;
+  z-index: 1;
+  cursor: pointer;
+}
 
 /* Text Styles*/
 .x-large {
