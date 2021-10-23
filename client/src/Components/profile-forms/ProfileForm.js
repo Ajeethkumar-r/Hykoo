@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { PROFILE_ERROR } from '../../actions/types';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
 import ScrollButton from '../Scroll/scrollButton';
 
@@ -69,6 +70,13 @@ const ProfileForm = ({
   const onSubmit = (e) => {
     e.preventDefault();
     createProfile(formData, history, profile ? true : false);
+    if (PROFILE_ERROR) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
@@ -196,12 +204,23 @@ const ProfileForm = ({
             </div>
 
             <div className='form-group social-input'>
-              <i className='fab fa-instagram fa-2x' />
+              <i className='fab fa-facebook fa-2x' />
               <input
                 type='text'
-                placeholder='Instagram URL'
-                name='instagram'
-                value={instagram}
+                placeholder='Facebook URL'
+                name='facebook'
+                value={facebook}
+                onChange={onChange}
+              />
+            </div>
+
+            <div className='form-group social-input'>
+              <i className='fab fa-youtube fa-2x' />
+              <input
+                type='text'
+                placeholder='YouTube URL'
+                name='youtube'
+                value={youtube}
                 onChange={onChange}
               />
             </div>
@@ -216,6 +235,17 @@ const ProfileForm = ({
                 onChange={onChange}
               />
             </div>
+
+            <div className='form-group social-input'>
+              <i className='fab fa-instagram fa-2x' />
+              <input
+                type='text'
+                placeholder='Instagram URL'
+                name='instagram'
+                value={instagram}
+                onChange={onChange}
+              />
+            </div>
           </Fragment>
         )}
 
@@ -224,9 +254,9 @@ const ProfileForm = ({
           Go Back
         </Link>
       </form>
-      <Fragment>
-        <ScrollButton />
-      </Fragment>
+      <div>
+        <ScrollButton />{' '}
+      </div>
     </Fragment>
   );
 };

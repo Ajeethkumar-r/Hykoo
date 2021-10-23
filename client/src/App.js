@@ -18,6 +18,7 @@ import Alert from './Components/layout/Alert';
 import setAuthToken from './utils/setAuthToken';
 import Dashboard from './Components/dashboard/Dashboard';
 import ProfileForm from './Components/profile-forms/ProfileForm';
+import Experience from './Components/profile-forms/Experience';
 import PrivateRoute from './Components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
 
@@ -57,6 +58,7 @@ const App = () => {
                 path='/edit-profile'
                 component={ProfileForm}
               />
+              <PrivateRoute exact path='/experience' component={Experience} />
             </Switch>
           </section>
         </Fragment>

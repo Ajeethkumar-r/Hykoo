@@ -16,9 +16,7 @@ const Dashboard = ({
     getCurrentProfile();
   }, [getCurrentProfile]);
 
-  return loading && profile === null ? (
-    <Spinner />
-  ) : (
+  return (
     <Fragment>
       <h1 className='large text-primary'>Dashboard</h1>
       <p className='lead'>
@@ -42,7 +40,11 @@ const Dashboard = ({
         )
       ) : (
         <Fragment>
-          <Spinner />
+          {' '}
+          <p>You have not create a profile Yet, please share your info</p>
+          <Link to='/create-profile' className='btn btn-primary my-1'>
+            Create Profile
+          </Link>
         </Fragment>
       )}
     </Fragment>
