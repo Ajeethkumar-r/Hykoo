@@ -2,29 +2,30 @@ import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addExperience } from '../../actions/profile';
 import ScrollButton from '../Scroll/scrollButton';
+import { addEducation } from '../../actions/profile';
 import { PROFILE_ERROR } from '../../actions/types';
 
-const Experience = ({ addExperience, history }) => {
+const Educations = ({ addEducation, history }) => {
   const [formData, setFormData] = useState({
-    company: '',
-    title: '',
-    location: '',
+    college: '',
+    degree: '',
+    fieldofstudy: '',
     from: '',
     to: '',
     current: false,
     description: '',
   });
 
-  const { company, title, location, from, to, current, description } = formData;
+  const { college, degree, fieldofstudy, from, to, current, description } =
+    formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = (e) => {
     e.preventDefault();
-    addExperience(formData, history);
+    addEducation(formData, history);
     if (PROFILE_ERROR) {
       window.scrollTo({
         top: 0,
@@ -36,37 +37,37 @@ const Experience = ({ addExperience, history }) => {
 
   return (
     <Fragment>
-      <h1 className='large text-primary'>Add An Experience</h1>
+      <h1 className='large text-primary'>Add Your Education</h1>
       <p className='lead'>
-        <i className='fas fa-code-branch' /> Add any developer/programming
-        positions that you have had in the past
+        <i className='fas fa-code-branch' /> Add any college/bootcamp you have
+        attend
       </p>
       <small>* = required field</small>
       <form className='form' onSubmit={onSubmit}>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='* Job Title'
-            name='title'
-            value={title}
+            placeholder='* College or Bootcamp'
+            name='college'
+            value={college}
             onChange={onChange}
           />
         </div>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='* Company'
-            name='company'
-            value={company}
+            placeholder='* Degree or Certificate'
+            name='degree'
+            value={degree}
             onChange={onChange}
           />
         </div>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Location'
-            name='location'
-            value={location}
+            placeholder='Fiel Of Study'
+            name='fieldofstudy'
+            value={fieldofstudy}
             onChange={onChange}
           />
         </div>
@@ -103,7 +104,7 @@ const Experience = ({ addExperience, history }) => {
             name='description'
             cols='30'
             rows='5'
-            placeholder='Job Description'
+            placeholder='Program Description'
             value={description}
             onChange={onChange}
           />
@@ -115,14 +116,14 @@ const Experience = ({ addExperience, history }) => {
       </form>
       <div>
         {' '}
-        <ScrollButton />
+        <ScrollButton />{' '}
       </div>
     </Fragment>
   );
 };
 
-Experience.propTypes = {
-  addExperience: PropTypes.func.isRequired,
+Educations.propTypes = {
+  addEducation: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addExperience })(Experience);
+export default connect(null, { addEducation })(Educations);

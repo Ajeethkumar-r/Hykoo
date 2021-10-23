@@ -19,6 +19,7 @@ import setAuthToken from './utils/setAuthToken';
 import Dashboard from './Components/dashboard/Dashboard';
 import ProfileForm from './Components/profile-forms/ProfileForm';
 import Experience from './Components/profile-forms/Experience';
+import Educations from './Components/profile-forms/Educations';
 import PrivateRoute from './Components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
 
@@ -59,6 +60,7 @@ const App = () => {
                 component={ProfileForm}
               />
               <PrivateRoute exact path='/experience' component={Experience} />
+              <PrivateRoute exact path='/education' component={Educations} />
             </Switch>
           </section>
         </Fragment>
