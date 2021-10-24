@@ -1,16 +1,17 @@
 import React, { Fragment, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profile';
+import ExperienceList from './ExperienceList';
+import EducationsList from './EducationsList';
 import PropTypes from 'prop-types';
 import Spinner from '../layout/Spinner';
 import { DashLinks } from './DashLinks';
 import { Link } from 'react-router-dom';
-import ScrollButton from '../Scroll/scrollButton';
 
 const Dashboard = ({
   getCurrentProfile,
   auth: { user },
-  profile: { profile, loading },
+  profile: { profile, loading, experience },
 }) => {
   useEffect(() => {
     getCurrentProfile();
@@ -28,7 +29,8 @@ const Dashboard = ({
         </Fragment> ? (
           <Fragment>
             <DashLinks />
-            <ScrollButton />
+            <ExperienceList experience={profile.experience} />
+            <EducationsList education={profile.education} />
           </Fragment>
         ) : (
           <Fragment>

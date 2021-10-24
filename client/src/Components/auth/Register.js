@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { setAlert } from '../../actions/alertActions';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
-import ScrollButton from '../Scroll/scrollButton';
 
 //action
 
@@ -94,7 +93,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       <p className='my-1'>
         Already have an account? <Link to='/login'>Sign In</Link>
       </p>
-      <ScrollButton />
     </Fragment>
   );
 };

@@ -3,7 +3,7 @@
   --primary-color: #ff4483;
   --dark-color: #252525;
   --light-color: #f4f4f4;
-  --danger-color: #f1183c;
+  --danger-color: #db0707;
   --success-color: #30a130;
 }
 
@@ -57,6 +57,17 @@ img {
   font-size: 10rem;
   z-index: 1;
   cursor: pointer;
+}
+
+th {
+  background-color: rgb(49, 49, 49);
+}
+
+table,
+th,
+td {
+  border: 1px solid rgb(100, 100, 100);
+  border-collapse: collapse;
 }
 
 /* Text Styles*/
@@ -315,11 +326,7 @@ button {
 .table th,
 .table td {
   padding: 1rem;
-  text-align: left;
-}
-
-.table th {
-  background: var(--light-color);
+  text-align: center;
 }
 
 /* Navbar */

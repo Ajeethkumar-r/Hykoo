@@ -70,6 +70,7 @@ const ProfileForm = ({
   const onSubmit = (e) => {
     e.preventDefault();
     createProfile(formData, history, profile ? true : false);
+
     if (PROFILE_ERROR) {
       window.scrollTo({
         top: 0,
