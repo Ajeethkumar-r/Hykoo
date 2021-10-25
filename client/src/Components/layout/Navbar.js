@@ -1,9 +1,8 @@
 import React, { Fragment } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logout, login } from '../../actions/auth';
-import { setAlert } from '../../actions/alertActions';
+import { logout } from '../../actions/auth';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (

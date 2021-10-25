@@ -1,7 +1,13 @@
 import api from '../utils/api';
 import { setAlert } from './alertActions';
 
-import { GET_PROFILE, PROFILE_ERROR, UPDATE_PROFILE } from './types';
+import {
+  GET_PROFILE,
+  PROFILE_ERROR,
+  UPDATE_PROFILE,
+  CLEAR_PROFILE,
+  ACCOUNT_DELETED,
+} from './types';
 
 export const getCurrentProfile = () => async (dispatch) => {
   try {
@@ -95,6 +101,22 @@ export const addEducation = (formData, history) => async (dispatch) => {
       errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
     }
 
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+export const deleteExperience = (id) => async (dispatch) => {
+  try {
+    const res = await api.delete(`/profile/experience/${id}`);
+
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data,
+    });
+  } catch (err) {
     dispatch({
       type: PROFILE_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status },
