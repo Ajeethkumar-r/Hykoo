@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import formatDate from '../../utils/formatDate';
 import { deleteExperience } from '../../actions/profile';
+import formatDate from '../../utils/formatDate';
 
 const ExperienceList = ({ experience, deleteExperience }) => {
   const experiences = experience.map((exp) => (
     <tr key={exp._id}>
-      <td> {exp.company} </td>
-      <td className='hide-sm'> {exp.title} </td>
-      <td className='hide-sm'>
-        {formatDate(exp.from)} - {exp.to === null ? ' Now' : formatDate(exp.to)}
+      <td>{exp.company}</td>
+      <td className='hide-sm'>{exp.title}</td>
+      <td>
+        {formatDate(exp.from)} - {exp.to ? formatDate(exp.to) : 'Now'}
       </td>
       <td>
         <button
@@ -32,7 +32,7 @@ const ExperienceList = ({ experience, deleteExperience }) => {
             <th>Company</th>
             <th className='hide-sm'>Title</th>
             <th className='hide-sm'>Time Period</th>
-            <th> </th>
+            <th />
           </tr>
         </thead>
         <tbody>{experiences}</tbody>

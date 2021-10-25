@@ -123,3 +123,38 @@ export const deleteExperience = (id) => async (dispatch) => {
     });
   }
 };
+
+export const deleteEducation = (id) => async (dispatch) => {
+  try {
+    const res = await api.delete(`/profile/education/${id}`);
+
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+export const deleteAccount = () => async (dispatch) => {
+  if (
+    window.confirm(
+      'Are you sure ? This action will delete your profile permanently !!'
+    )
+  ) {
+    try {
+      await api.delete('/profile');
+
+      dispatch({ type: CLEAR_PROFILE });
+      dispatch({ type: ACCOUNT_DELETED });
+    } catch (err) {
+      dispatch({
+        type: PROFILE_ERROR,
+        payload: { msg: err.response.statusText, status: err.response.status },
+      });
+    }
+  }
+};
