@@ -1,10 +1,11 @@
 /* Global Styles */
 :root {
-  --primary-color: #ff4483;
+  --primary-color: #b42aeb;
+  --secprimary-color: #ee779f;
   --dark-color: #252525;
   --light-color: #f4f4f4;
-  --danger-color: #db0707;
-  --success-color: #30a130;
+  --danger-color: #df1616;
+  --success-color: #2bb82b;
 }
 
 * {
@@ -46,7 +47,7 @@ img {
 
 .scroll {
   text-align: center;
-  color: #e75480;
+  color: #b42aeb;
   overflow-y: scroll;
   height: 2500px;
   position: fixed;
@@ -190,6 +191,10 @@ td {
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
+}
+
+.bg-secprimary {
+  background-color: var(--secprimary-color);
 }
 
 .btn-primary:hover {
@@ -393,6 +398,7 @@ button {
 .profile {
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
+  border-radius: 5px;
   align-items: center;
   grid-gap: 2rem;
   padding: 1rem;
@@ -414,6 +420,7 @@ button {
 .profile-top {
   grid-area: top;
   display: flex;
+  border-radius: 5px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
