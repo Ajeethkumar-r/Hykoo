@@ -414,7 +414,7 @@ button {
     'about about'
     'exp edu'
     'github github';
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
 }
 
 .profile-top {
@@ -454,10 +454,12 @@ button {
 
 .profile-exp {
   grid-area: exp;
+  border-radius: 5px;
 }
 
 .profile-edu {
   grid-area: edu;
+  border-radius: 5px;
 }
 
 .profile-exp h2,
