@@ -238,6 +238,10 @@ td {
   border: #ccc solid 1px;
 }
 
+.bg-light {
+  border-radius: 5px;
+}
+
 .btn:hover {
   opacity: 0.8;
 }

@@ -20,6 +20,7 @@ import Dashboard from './Components/dashboard/Dashboard';
 import ProfileForm from './Components/profile-forms/ProfileForm';
 import Experience from './Components/profile-forms/Experience';
 import Educations from './Components/profile-forms/Educations';
+import Profiles from './Components/profileslist/Profiles';
 import PrivateRoute from './Components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
 
@@ -47,6 +48,7 @@ const App = () => {
             <Switch>
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
+              <Route exact path='/Profiles' component={Profiles} />
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
 
               <PrivateRoute
