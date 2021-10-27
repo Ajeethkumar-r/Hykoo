@@ -21,6 +21,7 @@ import ProfileForm from './Components/profile-forms/ProfileForm';
 import Experience from './Components/profile-forms/Experience';
 import Educations from './Components/profile-forms/Educations';
 import Profiles from './Components/profileslist/Profiles';
+import EachProfile from './Components/Profile/EachProfile';
 import PrivateRoute from './Components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
 
@@ -49,6 +50,7 @@ const App = () => {
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
               <Route exact path='/Profiles' component={Profiles} />
+              <Route exact path='/Profile/:id' component={EachProfile} />
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
 
               <PrivateRoute

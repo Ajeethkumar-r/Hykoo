@@ -229,6 +229,11 @@ td {
   color: #fff;
 }
 
+.btn-lightdark {
+  background-color: rgb(136, 135, 135);
+  color: #fff;
+}
+
 .btn-white,
 .bg-white,
 .badge-white,
