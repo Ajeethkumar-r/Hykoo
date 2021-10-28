@@ -22,6 +22,7 @@ import Experience from './Components/profile-forms/Experience';
 import Educations from './Components/profile-forms/Educations';
 import Profiles from './Components/profileslist/Profiles';
 import EachProfile from './Components/Profile/EachProfile';
+import Posts from './Components/posts/Posts';
 import PrivateRoute from './Components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
 
@@ -65,6 +66,7 @@ const App = () => {
               />
               <PrivateRoute exact path='/experience' component={Experience} />
               <PrivateRoute exact path='/education' component={Educations} />
+              <PrivateRoute exact path='/posts' component={Posts} />
             </Switch>
           </section>
         </Fragment>
