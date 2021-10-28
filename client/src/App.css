@@ -293,6 +293,10 @@ td {
   color: #888;
 }
 
+.fas fa-trash-alt {
+  font-size: 1.3rem;
+}
+
 .form input[type='text'],
 .form input[type='email'],
 .form input[type='password'],
