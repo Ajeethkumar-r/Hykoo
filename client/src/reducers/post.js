@@ -6,50 +6,47 @@ import {
   ADD_POST,
 } from '../actions/types';
 
-const initialstate = {
+const initialState = {
   posts: [],
   post: null,
   loading: true,
   error: {},
 };
 
-// eslint-disable-next-line
-export default function (state = initialstate, action) {
+function postReducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
     case GET_POSTS:
       return {
         ...state,
-        loading: false,
         posts: payload,
+        loading: false,
       };
-    case POST_ERROR:
+    case ADD_POST:
       return {
         ...state,
-        loading: false,
-        error: payload,
-      };
-    case UPDATE_LIKES:
-      return {
-        ...state, // post._ID in DB === post that we give a like in UI
-        posts: state.posts.map((post) =>
-          post._id === payload.id ? { ...post, likes: payload.likes } : post
-        ),
+        posts: [payload, ...state.posts],
         loading: false,
       };
-
     case DELETE_POST:
       return {
         ...state,
         posts: state.posts.filter((post) => post._id !== payload),
         loading: false,
       };
-
-    case ADD_POST:
+    case POST_ERROR:
       return {
         ...state,
-        posts: [payload, ...state.posts],
+        error: payload,
+        loading: false,
+      };
+    case UPDATE_LIKES:
+      return {
+        ...state,
+        posts: state.posts.map((post) =>
+          post._id === payload.id ? { ...post, likes: payload.likes } : post
+        ),
         loading: false,
       };
 
@@ -57,3 +54,5 @@ export default function (state = initialstate, action) {
       return state;
   }
 }
+
+export default postReducer;

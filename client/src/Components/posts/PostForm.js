@@ -8,7 +8,7 @@ const PostForm = ({ addPost }) => {
   return (
     <div className='posts-form-header'>
       <div className='bg-primary' style={{ borderRadius: '5px' }}>
-        <h4 className='p-1'>Say something...</h4>
+        <h4 className='p'>Say something...</h4>
       </div>
       <form
         className='form my-1'
@@ -20,19 +20,17 @@ const PostForm = ({ addPost }) => {
       >
         <textarea
           cols='30'
-          rows='5'
+          rows='7'
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder='Create post'
         ></textarea>
-        <button
+        <input
           type='submit'
-          value='Submit'
+          value='Post'
           style={{ borderRadius: '5px' }}
           className='btn btn-post my-1'
-        >
-          <i className='fab fa-telegram fa-2x '></i>
-        </button>
+        />
       </form>
     </div>
   );

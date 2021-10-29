@@ -2,7 +2,7 @@
 :root {
   --primary-color: #b42aeb;
   --post-color: #35cece;
-  --dark-color: #252525;
+  --dark-color: #353535;
   --light-color: #f4f4f4;
   --danger-color: #df1616;
   --success-color: #2bb82b;
@@ -118,6 +118,7 @@ td {
 .p {
   padding: 0.5rem;
 }
+
 .p-1 {
   padding: 1rem;
 }
@@ -524,6 +525,7 @@ button {
 .post-form .post-form-header {
   background: var(--primary-color);
   padding: 0.5rem;
+  border-radius: 5px;
 }
 
 .post {
