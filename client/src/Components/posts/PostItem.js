@@ -18,9 +18,7 @@ const PostItem = ({
     </div>
     <div>
       <p className='my-1'>{text}</p>
-      <p className='post-date'>
-        Posted on <Moment format='YYYY/MM/DD'>{date} </Moment>{' '}
-      </p>
+      <p className='post-date'>Posted on {formatDate(date)} </p>
       <button className='btn btn-light'>
         <i className='fas fa-thumbs-up' />{' '}
         <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
@@ -28,7 +26,7 @@ const PostItem = ({
       <button className='btn btn-light'>
         <i className='fas fa-thumbs-down' />
       </button>
-      <Link to={`/posts/${_id}`} className='btn btn-primary'>
+      <Link to={`/post/${_id}`} className='btn btn-primary'>
         Discussion{' '}
         {comments.length > 0 && (
           <span className='comment-count'>{comments.length}</span>
