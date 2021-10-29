@@ -1,11 +1,21 @@
 /* Global Styles */
 :root {
   --primary-color: #b42aeb;
-  --secprimary-color: #ee779f;
+  --post-color: #35cece;
   --dark-color: #252525;
   --light-color: #f4f4f4;
   --danger-color: #df1616;
   --success-color: #2bb82b;
+}
+
+.btn.btn-post {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.fa.fa-telegram {
+  font-size: 1.3rem;
+  border-radius: 50%;
 }
 
 * {
