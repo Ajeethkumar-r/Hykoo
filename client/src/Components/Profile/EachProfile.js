@@ -21,9 +21,6 @@ const EachProfile = ({ getProfileById, profile: { profile }, auth, match }) => {
       ) : (
         <Fragment>
           {' '}
-          <Link to='/profiles' className='btn btn-light'>
-            Goto Profiles
-          </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
             auth.user._id === match.params.id && (

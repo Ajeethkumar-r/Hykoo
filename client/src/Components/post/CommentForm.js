@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { addComment } from '../../actions/post';
 import { connect } from 'react-redux';
+import { addComment } from '../../actions/post';
 
 const CommentForm = ({ postId, addComment }) => {
   const [text, setText] = useState('');
+
   return (
-    <div className='posts-form-header'>
-      <div className='bg-primary' style={{ borderRadius: '5px' }}>
-        <h4 className='p'>Add your opinion</h4>
+    <div className='post-form' style={{ borderRadius: '5px' }}>
+      <div className='bg-primary p' style={{ borderRadius: '5px' }}>
+        <h3>Leave a Comment</h3>
       </div>
       <form
         className='form my-1'
@@ -19,18 +20,15 @@ const CommentForm = ({ postId, addComment }) => {
         }}
       >
         <textarea
+          name='text'
           cols='30'
-          rows='4'
+          rows='5'
+          placeholder='Comment the post'
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder='Add Comment'
-        ></textarea>
-        <input
-          type='submit'
-          value='Comment'
-          style={{ borderRadius: '5px' }}
-          className='btn btn-light my-1'
+          required
         />
+        <input type='submit' className='btn btn-light my-1' value='Submit' />
       </form>
     </div>
   );
