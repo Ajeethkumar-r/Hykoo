@@ -29,6 +29,8 @@ import { LOGOUT } from './actions/types';
 
 const App = () => {
   useEffect(() => {
+    store.dispatch(loadUser());
+
     if (localStorage.token) {
       setAuthToken(localStorage.token);
     }

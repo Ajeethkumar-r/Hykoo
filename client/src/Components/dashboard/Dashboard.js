@@ -1,16 +1,15 @@
 import React, { Fragment, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getCurrentProfile } from '../../actions/profile';
+import DashLinks from './DashLinks';
 import ExperienceList from './ExperienceList';
 import EducationsList from './EducationsList';
-import PropTypes from 'prop-types';
-import { DashLinks } from './DashLinks';
-import { Link } from 'react-router-dom';
-import { deleteAccount } from '../../actions/profile';
+import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 
 const Dashboard = ({
-  deleteAccount,
   getCurrentProfile,
+  deleteAccount,
   auth: { user },
   profile: { profile },
 }) => {
@@ -50,9 +49,9 @@ const Dashboard = ({
 
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
+  deleteAccount: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired,
-  deleteAccount: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({

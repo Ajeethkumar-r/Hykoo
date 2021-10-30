@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { getPost } from '../../actions/post';
 import PostItem from '../posts/PostItem';
 import Spinner from '../layout/Spinner';
+import ScrollButton from '../Scroll/scrollButton';
+import CommentForm from './CommentForm';
 
 const Post = ({ post: { post }, getPost, match }) => {
   useEffect(() => {
@@ -14,6 +16,8 @@ const Post = ({ post: { post }, getPost, match }) => {
   ) : (
     <Fragment>
       <PostItem post={post} showActions={false} />
+      <CommentForm postId={post._id} />
+      <ScrollButton />
     </Fragment>
   );
 };
