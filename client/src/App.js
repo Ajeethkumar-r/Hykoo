@@ -23,13 +23,12 @@ import Educations from './Components/profile-forms/Educations';
 import Profiles from './Components/profileslist/Profiles';
 import EachProfile from './Components/Profile/EachProfile';
 import Posts from './Components/posts/Posts';
+import Post from './Components/post/Post';
 import PrivateRoute from './Components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
 
 const App = () => {
   useEffect(() => {
-    store.dispatch(loadUser());
-
     if (localStorage.token) {
       setAuthToken(localStorage.token);
     }
@@ -67,6 +66,7 @@ const App = () => {
               <PrivateRoute exact path='/experience' component={Experience} />
               <PrivateRoute exact path='/education' component={Educations} />
               <PrivateRoute exact path='/posts' component={Posts} />
+              <PrivateRoute exact path='/posts/:id' component={Post} />
             </Switch>
           </section>
         </Fragment>

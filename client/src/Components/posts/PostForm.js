@@ -29,7 +29,7 @@ const PostForm = ({ addPost }) => {
           type='submit'
           value='Post'
           style={{ borderRadius: '5px' }}
-          className='btn btn-post my-1'
+          className='btn btn-light my-1'
         />
       </form>
     </div>
